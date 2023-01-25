@@ -30,7 +30,7 @@ contract PriceConsumerV3Test is Test {
         uint256 timestampWhenUpdated = block.timestamp;
         tellorOracle.submitValue(ethUsdQueryId, abi.encode(10000 * 10 ** 18), 0, queryData);
 
-        vm.warp(block.timestamp + 12 * 3600 + 1); // advance time past oracle dispute period of 12 hours
+        vm.warp(block.timestamp + 1 * 3600 + 1); // advance time past one hour after last update
 
         // get latest price from ethPriceFeed
         vm.prank(bob);
