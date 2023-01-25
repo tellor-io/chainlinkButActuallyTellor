@@ -14,10 +14,11 @@ contract PriceConsumerV3Test is Test {
     TellorPlayground public token;
     ETHUSDPriceFeed public ethPriceFeed;
     AggregatorV3Interface public priceFeed;
-    
+
     function setUp() public {
         tellor = new TellorPlayground();
         token = new TellorPlayground();
+
         ethPriceFeed = new ETHUSDPriceFeed(payable(address(tellor)));
         priceFeed = AggregatorV3Interface(address(ethPriceFeed));
     }
