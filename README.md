@@ -1,7 +1,6 @@
 <img src="assets/oh_its_tellor.png" width="350">
 
 # Chainlink Style Price Feed Using Tellor
-It's permissionless.
 
 ## Pre-requisites
 [foundry](https://github.com/foundry-rs/foundry)
