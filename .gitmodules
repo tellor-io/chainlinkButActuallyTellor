@@ -5,3 +5,7 @@
 [submodule "lib/solmate"]
 	path = lib/solmate
 	url = https://github.com/transmissions11/solmate
+[submodule "lib/usingtellor"]
+	path = lib/usingtellor
+	url = https://github.com/tellor-io/usingtellor
+	branch = v5.0.4
