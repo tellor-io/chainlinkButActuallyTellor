@@ -16,14 +16,14 @@ contract ETHUSDPriceFeed is UsingTellor {
     //   uint256 startedAt,
     //   uint256 updatedAt,
     //   uint80 answeredInRound
-        uint256 answer,
+        int256 answer,
         uint256 updatedAt
     )
     {
         uint256 _timestamp;
         bytes memory _value;
         (_value, _timestamp) = getDataBefore(ethUsdQueryId, block.timestamp - 1 hours);
-        uint256 price = abi.decode(_value,(uint256));
+        int256 price = int256(abi.decode(_value,(uint256)));
         return (price, _timestamp);
     }
 }
