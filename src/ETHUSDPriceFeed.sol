@@ -21,7 +21,7 @@ contract ETHUSDPriceFeed is UsingTellor {
         uint80 _answeredInRound;
         bytes memory _value;
 
-        (_value, _updatedAt) = getDataBefore(ethUsdQueryId, block.timestamp - 1 hours);
+        (_value, _updatedAt) = getDataBefore(ethUsdQueryId, block.timestamp - 12 hours);
         _answer = int256(abi.decode(_value, (uint256)));
         return (_roundId, _answer, _startedAt, _updatedAt, _answeredInRound);
     }
