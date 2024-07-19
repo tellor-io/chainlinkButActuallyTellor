@@ -9,7 +9,7 @@ contract SecretTellorUser {
     uint256 public lastStoredTimestamp; // Cache timestamp to prevent dispute attacks
 
     // Input tellor oracle address
-    constructor(address payable _ethOracle) {
+    constructor(address _ethOracle) {
         ethOracle = AggregatorV3Interface(_ethOracle);
     }
 
